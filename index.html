@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achu Travels</title>
+
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        margin:0;
+        font-family:Arial;
+        background:#f4f9ff;
+        color:#333;
+    }
+    header{
+    background:#0d6efd;
+    color:white;
+    padding:20px;
+    text-align:center;
+    }
+    nav{
+        background:#084298;
+        text-align:center;
+        padding:10px;
+    }
+    nav a{
+        color:white;
+        margin:0 12px;
+        text-decoration:none;
+    }
+    .hero{
+        background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
+        height:250px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:white;
+        text-align:center;
+    }
+    section{
+        padding:30px;
+        max-width:1000px;
+        margin:auto;
+        text-align:center;
+    }
+    .cards{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+        gap:15px;
+    }
+    .card{
+        background:white;
+        padding:15px;
+        border-radius:8px;
+        box-shadow:0 2px 6px #ccc;
+    }
+    input, select, button{
+        width:100%;
+        padding:10px;
+        margin:10px 0;
+    }
+    button{
+        background:#0d6efd;
+        color:white;
+        border:none;
+        cursor:pointer;
+    }
+    button:hover{
+        background:#084298;
+    }
+    footer{
+        background:#084298;
+        color:white;
+        text-align:center;
+        padding:10px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Achu Travels</h1>
+    <p>Your Journey, Our Responsibility</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#booking">Booking</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+    <h2>Explore the World with Us</h2>
+</div>
+
+<section>
+    <h2>Welcome</h2>
+    <p>
+        Achu Travels helps you plan safe, comfortable and affordable trips. From family vacations to business travel, we handle everything for you.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Tour Packages</h3>
+            <p>Starting from ₹9,999</p>
+        </div>
+
+        <div class="card">
+            <h3>Hotel Booking</h3>
+            <p>Starting from ₹1,500 / night</p>
+        </div>
+
+        <div class="card">
+            <h3>Transport Services</h3>
+            <p>Starting from ₹2,000 / day</p>
+        </div>
+
+        <div class="card">
+            <h3>Travel Support</h3>
+            <p>Starting from ₹999</p>
+        </div>
+    </div>
+</section>
+
+<!-- 🔽 USER SERVICE SELECTION -->
+<section id="booking">
+    <h2>Book a Service</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <select id="service">
+        <option value="">-- Select a Service --</option>
+        <option value="Tour Packages">Tour Packages</option>
+        <option value="Hotel Booking">Hotel Booking</option>
+        <option value="Transport Services">Transport Services</option>
+        <option value="Travel Support">Travel Support</option>
+    </select>
+
+    <button onclick="bookService()">Submit</button>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>
+        📞 +91 88384 90151 <br>
+        ✉️ achutravels@gmail.com
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Achu Travels</p>
+</footer>
+
+<script>
+function bookService(){
+    let name = document.getElementById("name").value;
+    let service = document.getElementById("service").value;
+
+    if(name === "" || service === ""){
+        alert("Please enter your name and select a service");
+    } else {
+        alert("Thank you " + name + "! You selected: " + service);
+    }
+}
+</script>
+
+</body>
+</html>
